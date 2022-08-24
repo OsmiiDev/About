@@ -1,8 +1,26 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import "../styles/globals.css";
+import type { AppProps } from "next/app";
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+/**
+ * Main app page
+ * @param {AppProps} properties App properties
+ * @return {React.ReactNode} The React node
+ */
+function App({ Component, pageProps }: AppProps) {
+  return <Component {...pageProps} />;
 }
 
-export default MyApp
+/**
+ * <MantineProvider theme={{
+    colorScheme: "dark",
+    fontFamily: "Roboto",
+  }}>
+    <TypographyStylesProvider >
+      <AppShell
+        padding={0}
+      >
+      </AppShell>
+    </TypographyStylesProvider>
+  </MantineProvider>
+ */
+export default App;

@@ -1,0 +1,37 @@
+{
+    "editor.tabSize": 2,
+    "editor.quickSuggestions": {
+        "strings": true
+    },
+    "files.associations": {
+        "*.css": "tailwindcss"
+    },
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true
+    },
+    "typescript.preferences.importModuleSpecifier": "relative",
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "eslint.format.enable": true,
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "todohighlight.keywords": [
+        {
+            "text": "TODO",
+            "color": "#4488ff",
+            "backgroundColor": "#00000000",
+            "fontWeight": "bold",
+        },
+        {
+            "text": "ISSUE",
+            "color": "#ff4488",
+            "backgroundColor": "#00000000",
+            "fontWeight": "bold",
+        },
+    ]
+}
