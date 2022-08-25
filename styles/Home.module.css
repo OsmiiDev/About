@@ -144,6 +144,17 @@
 }
 
 @media screen and (orientation:portrait) {
+  .title {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .description {
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+  }
+
   .profile {
     left: 0;
 
@@ -166,5 +177,9 @@
     font-size: calc(20px + 5vw);
   }
 
+  .links {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }
 

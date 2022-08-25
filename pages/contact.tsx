@@ -1,14 +1,17 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import { SiDiscord } from "react-icons/si";
+import { SocialMediaCard } from "../components/SocialMediaCard";
+
 
 const Contact: NextPage = () => {
   return (
     <>
       <Head>
-        <title> Contact me </title>
+        <title> Contact </title>
       </Head>
       <h2> Contact me </h2>
-      <p> &#47;&#47; TODO </p>
+      <SocialMediaCard icon={<SiDiscord />} link="https://discord.gg/ZQQQQQQ" title="Discord" description="Join my discord server" />
     </>
   );
 };
