@@ -1,4 +1,4 @@
-import Link from "next/link";
+import styles from "../styles/SocialMediaCard.module.css";
 
 export type SocialMediaCardProps = {
   icon: React.ReactNode;
@@ -9,15 +9,14 @@ export type SocialMediaCardProps = {
 
 export const SocialMediaCard: React.FC<SocialMediaCardProps> = ({ icon, link, title, description }: SocialMediaCardProps) => {
   return (
-    <div className="rounded-sm bg-neutral-400">
+    <a target="_blank" href={link} rel="noreferrer" className={styles.card}>
       {icon}
-      <Link href = {link}>
-        <a>
-          <h2> {title} </h2>
-          <p> {description} </p>
-        </a>
-      </Link>
-    </div>
+      <div className={styles.divider}></div>
+      <div>
+        <h2 className={styles.title}> {title} </h2>
+        <p className={styles.description}> {description} </p>
+      </div>
+    </a>
   );
 };
 

@@ -7,8 +7,7 @@
   height: 100vh;
   margin: 0;
   padding: 0;
-
-  overflow: hidden;
+  padding-top: 10vh;
 }
 
 .header {
@@ -24,11 +23,10 @@
   align-items: center;
 
   margin-left: 10%;
-  margin-top: 10%;
 }
 
 .profile {
-  position: absolute;
+  position: fixed;
   right: -200px;
   bottom: 0;
 
@@ -117,7 +115,7 @@
   align-items: center;
   justify-content: center;
 
-  margin-left: 10px;
+  margin-left: 20px;
   min-width: 100px;
 
   transition: 300ms;
@@ -142,6 +140,61 @@
 .projects:hover span {
   transform: translateX(3px);
 }
+
+
+.contactContainer.open > a:nth-child(1) {
+  animation: open 400ms forwards;
+  animation-delay: 0ms;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.contactContainer.open > a:nth-child(2) {
+  animation: open 400ms forwards;
+  animation-delay: 100ms;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.contactContainer.open > a:nth-child(3) {
+  animation: open 400ms forwards;
+  animation-delay: 200ms;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@keyframes open {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.contactContainer {
+  padding-left: 10%;
+  padding-top: 40px;
+  transform: translateY(10px);
+  opacity: 0;
+
+  transition: 800ms;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.contactContainer.open {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.contactContainer > a {
+  opacity: 0;
+  transform: translateY(10px);
+
+  transition: 400ms;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+
 
 @media screen and (orientation:portrait) {
   .title {
@@ -181,5 +234,15 @@
     margin-left: 10px;
     margin-right: 10px;
   }
-}
 
+  .contactContainer {
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .contactContainer > a { 
+    width: 100%;
+    margin-top: 5px;
+  }
+}

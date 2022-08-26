@@ -1,0 +1,20 @@
+.title {
+  margin-left: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+
+  font-size: 30px;
+}
+
+.cards {
+  display: flex;
+
+  width: 100%;
+}
+
+@media screen and (orientation:portrait) { 
+  .cards {
+    flex-direction: column;
+  }
+}
+

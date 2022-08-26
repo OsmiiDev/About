@@ -4,14 +4,8 @@ import Image from "next/future/image";
 import styles from "../styles/Home.module.css";
 import { BsAt, BsChevronRight } from "react-icons/bs";
 import Link from "next/link";
-import { SocialMediaCard } from "../components/SocialMediaCard";
-import { SiDiscord, SiGithub, SiTwitter } from "react-icons/si";
 
-function openContact() {
-  document.getElementsByClassName(styles.contactContainer)[0].classList.add(styles.open);
-}
-
-const Home: NextPage = () => {
+const About: NextPage = () => {
   return (
     <>
       <Head>
@@ -23,14 +17,14 @@ const Home: NextPage = () => {
         </div>
         <p className={styles.description}> I&#39;m an aspiring full-stack developer with interests in machine learning. </p>
         <div className={styles.links}>
-          <Link href = "/#contact" onClick={openContact}>
-            <a onClick={openContact}>
+          <Link href = "/contact">
+            <a>
               <div className={styles.contact}>
                 <BsAt color={"#ffffff"} size={20}/> <p> Contact me </p>
               </div>
             </a>
           </Link>
-          <Link href="/#about">
+          <Link href="/about">
             <a>
               <div className={styles.projects}>
                 <p> More about me </p> <span> <BsChevronRight size={12} className="icon"/> </span>
@@ -38,15 +32,10 @@ const Home: NextPage = () => {
             </a>
           </Link>
         </div>
-        <div className={styles.contactContainer}>
-          <SocialMediaCard icon={<SiDiscord size={27} color="#5865F2"/>} link="https://discord.com/users/328984108271140864" title="Discord" description="Osmii#0076" />
-          <SocialMediaCard icon={<SiGithub size={27} color="#cccccc"/>} link="https://github.com/OsmiiDev" title="Github" description="OsmiiDev" />
-          <SocialMediaCard icon={<SiTwitter size={27} color="#1da1f2"/>} link="https://discord.com/users/328984108271140864" title="Twitter" description="@Cosmiium" />
-        </div>
       </div>
       <Image src="/profile.png" alt="profile" width={1375} height={1286} className={styles.profile} />
     </>
   );
 };
 
-export default Home;
+export default About;

@@ -29,6 +29,7 @@ module.exports = {
     }],
     "space-infix-ops": ["error", { "int32Hint": false }],
     "max-len": ["error", 200],
+    "require-jsdoc": ["off"],
     "@typescript-eslint/no-non-null-assertion": ["off"],
     "@typescript-eslint/no-explicit-any": ["off"],
     "@typescript-eslint/no-var-requires": ["off"],
