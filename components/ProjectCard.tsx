@@ -1,0 +1,41 @@
+import styles from "../styles/ProjectCard.module.css";
+import { SiNextdotjs, SiReact, SiTailwindcss, SiTypescript } from "react-icons/si";
+import { AiFillLock } from "react-icons/ai";
+
+import React from "react";
+import Image from "next/future/image";
+export type ProjectCardProps = {
+  icon?: string;
+  link: string;
+  title: string;
+  date: string;
+  type: string;
+  description: string;
+  tech: string[];
+}
+
+const techIcons: {[key: string]: React.ReactNode} = {
+  "Private": <AiFillLock size={27} color="#cccccc"/>,
+  "React": <SiReact size={25} color="#5865F2" className={styles.icon}/>,
+  "Next.js": <SiNextdotjs size={25} color="#5865F2" className={styles.icon}/>,
+  "Tailwindcss": <SiTailwindcss size={25} color="#5865F2" className={styles.icon}/>,
+  "Typescript": <SiTypescript size={25} color="#5865F2" className={styles.icon}/>,
+};
+
+export const ProjectCard: React.FC<ProjectCardProps> = ({ icon, link, title, date, type, description, tech }: ProjectCardProps) => {
+  return (
+    <div className={styles.card}>
+      <div className="w-full pt-4 h-13 flex items-center justify-between">
+        <h2 className={styles.title}> {title} </h2>
+        <div className="flex pr-4">
+          {tech.map((tech) => techIcons[tech])}
+        </div>
+      </div>
+      <p className={styles.secondaryInfo}> {date} • {type} </p>
+      <div className={styles.divider}/>
+      <p className="ml-5 m-3 float-left text-neutral-300 text-sm"> {description} </p>
+      {icon ? <Image src={icon} alt="project" width={1375} height={1286} className={styles.image} /> : ""}
+    </div>
+  );
+};
+

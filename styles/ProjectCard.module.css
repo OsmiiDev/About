@@ -1,0 +1,60 @@
+.card {
+  float: left;
+
+  margin-left: 10px;
+  margin-top: 10px;
+  padding-right: 0px;
+  width: 400px;
+  height: 500px;
+  border-radius: 5px;
+
+  background-color: #111111;
+
+  transition: 300ms;
+}
+
+.card:hover {
+  box-shadow: 0px 0px 10px #4488ff66;
+  transform: scale(1.01) translateY(-2px);
+}
+
+.title {
+  float: left;
+
+  padding-left: 20px;
+
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.icon {
+  margin-right: 7px;
+  margin-bottom: 2px;
+}
+
+.secondaryInfo {
+  margin: 0;
+  margin-left: 20px;
+  padding-top: 0px;
+
+  float: left;
+  font-size: 15px;
+  font-weight: 400;
+
+  color: #aaaaaa;
+}
+
+.divider {
+  float: left;
+  
+  margin-left: 5%;
+  margin-top: 10px;
+  width: 90%;
+  height: 1px;
+
+  background-color: #282828;
+}
+
+.image {
+  width: 100%;
+}
