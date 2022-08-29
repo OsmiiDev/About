@@ -1,19 +1,37 @@
 .title {
-  font-size: 1.5em;
-  margin-bottom: 0.5em;
-}
-
-.projectCarouselContainer {
-  width: 100%;
-  overflow: auto;
-}
-.projectCarousel {
-  display: flex;
   float: left;
 
-  min-width: 100%;
+  font-size: 1.25em;
+  margin-left: 20px;
+}
+
+.projectCarousel {
+  float: left;
+
+  width: 100%;
+
+  white-space: nowrap;
   
-  flex-wrap: nowrap;
-  flex-shrink: unset;
   overflow: auto;
+}
+
+.projectCarousel::-webkit-scrollbar {
+  height: 4px;
+}
+
+.projectCarousel::-webkit-scrollbar-thumb {
+  background: #222222;
+  border-radius: 10px;
+}
+
+.projectCarousel::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+}
+
+@media screen and (orientation:portrait) {
+  .projectCarousel {
+    scroll-snap-type: x mandatory;
+    -ms-scroll-snap-type: x mandatory;
+  }
 }

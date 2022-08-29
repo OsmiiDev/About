@@ -1,16 +1,24 @@
 .card {
-  float: left;
+  position: relative;
+  display: inline-block;
 
   margin-left: 10px;
   margin-top: 10px;
+  margin-bottom: 10px;
   padding-right: 0px;
   width: 400px;
   height: 500px;
   border-radius: 5px;
+  
+  white-space: initial;
 
   background-color: #111111;
 
   transition: 300ms;
+
+  scroll-snap-align: start;
+  scroll-margin-left: 10px;
+  scroll-snap-stop: always;                                               
 }
 
 .card:hover {
@@ -57,4 +65,53 @@
 
 .image {
   width: 100%;
+}
+
+.links {
+  position: absolute;
+  bottom: 0;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  float: left;
+
+  margin-left: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 3px;
+
+  background-color: #282828;
+
+  transition: 300ms;
+}
+
+.link > span {
+  margin: 0;
+  margin-left: 8px;
+  padding-top: 1px;
+
+  font-size: 14px;
+
+  line-height: 0;
+}
+
+.link:hover {
+  background-color: #333333;
+}
+
+@media screen and (orientation:portrait) {
+  .card {
+    width: calc(100vw - 20px);
+  }
+
+  .card:last-child {
+    margin-right: 10px;
+  }
+
+  .title {
+    font-size: 1em;
+  }
+
 }
