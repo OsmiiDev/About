@@ -38,7 +38,7 @@ const Home: NextPage = () => {
         <div className={styles.contactContainer}>
           <SocialMediaCard icon={<SiDiscord size={27} color="#5865F2"/>} link="https://discord.com/users/328984108271140864" title="Discord" description="Osmii#0076" />
           <SocialMediaCard icon={<SiGithub size={27} color="#cccccc"/>} link="https://github.com/OsmiiDev" title="Github" description="OsmiiDev" />
-          <SocialMediaCard icon={<SiTwitter size={27} color="#1da1f2"/>} link="https://discord.com/users/328984108271140864" title="Twitter" description="@Cosmiium" />
+          <SocialMediaCard icon={<SiTwitter size={27} color="#1da1f2"/>} link="https://twitter.com/Cosmiium" title="Twitter" description="@Cosmiium" />
         </div>
       </div>
       <Image src="/profile.png" alt="profile" width={1375} height={1286} className={styles.profile} />

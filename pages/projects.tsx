@@ -37,12 +37,23 @@ const Projects: NextPage = () => {
         />
 
         <ProjectCard
+          title="Abilities"
+          type="Minecraft Plugin"
+          date="2022-08-29"
+          // eslint-disable-next-line max-len
+          description="A plugin that allows players to select abilities and perform moves under these abilities. Includes leveling up abilities and moves and an API to create custom abilities and actions."
+          tech={["Java", "Kotlin"]}
+        />
+
+        <ProjectCard
           title="...And more"
           type="Closed source projects"
           date="2022-08-26"
           description="There are more projects I've worked on that are not listed here, either due to me choosing to not share them or because they are private/closed source."
 
           tech={["Private"]}
+
+          hidden
         />
       </div>
     </>

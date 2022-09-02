@@ -22,8 +22,8 @@
 }
 
 .card:hover {
-  box-shadow: 0px 0px 10px #4488ff66;
-  transform: scale(1.01) translateY(-2px);
+  box-shadow: 0px 0px 10px #88888844;
+  transform: scale(1.005) translateY(-2px);
 }
 
 .title {
@@ -87,6 +87,10 @@
   transition: 300ms;
 }
 
+.linkDisabled {
+  background-color: #181818;
+}
+
 .link > span {
   margin: 0;
   margin-left: 8px;
@@ -99,6 +103,10 @@
 
 .link:hover {
   background-color: #333333;
+}
+
+.linkDisabled:hover {
+  background-color: #181818;
 }
 
 @media screen and (orientation:portrait) {
