@@ -10,7 +10,7 @@ import { RiOpenSourceLine } from "react-icons/ri";
 
 const Home: NextPage = () => {
   return (
-    <>
+    <div className="bg-black text-white">
       <Head>
         <title> Osmii </title>
       </Head>
@@ -42,7 +42,7 @@ const Home: NextPage = () => {
         </div>
       </div>
       <Image src="/profile.png" alt="profile" width={1375} height={1286} className={styles.profile} />
-    </>
+    </div>
   );
 };
 
